@@ -4,7 +4,7 @@ import { useTheme } from "next-themes"; // Handles theme switching
 
 import Link from "next/link"; // For navigation links
 import { usePathname } from "next/navigation"; // To determine the current path
-import { Sun, Moon, Menu, X } from "lucide-react"; // Icons for theme and mobile menu
+import { Sun, Moon, Menu, X, StarIcon } from "lucide-react"; // Icons for theme and mobile menu
 import { useState } from "react"; // For local state management
 import { Button } from "@/components/ui/button"; // ShadCN button component
 
@@ -28,7 +28,7 @@ const Header = () => {
     };
 
     fetchGithubStars();
-  }, [setGithubStars]);
+  }, []);
 
   // Navigation links
   const navigation = [
@@ -81,7 +81,6 @@ const Header = () => {
                 window.open("https://github.com/jacksonkasi1/FlexiSheet", "_blank");
               }}
               variant="outline"
-            //   className="flex cursor-pointer hover:bg-gray-400 flex-row gap-2 items-center"
             >
               <div className="flex items-center gap-1">
                 <StarIcon className="w-4 h-4 text-gray-300 fill-gray-300" />
